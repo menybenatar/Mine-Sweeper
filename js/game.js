@@ -43,6 +43,7 @@ function restart(size = gLevel.SIZE, mines = gLevel.MINES) {
   }
   initGame();
   updateFlags();
+  gIs7Boom = false;
 }
 function sevenBoom() {
   gIs7Boom = true;
