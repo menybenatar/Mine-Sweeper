@@ -46,7 +46,7 @@ function restart(size = gLevel.SIZE, mines = gLevel.MINES) {
 }
 function sevenBoom() {
   gIs7Boom = true;
-  restart(12, 30);
+  restart(12, 21);
 }
 
 function setMinesNegsCount() {
@@ -87,6 +87,7 @@ function putMinesRandomalyOnBoard() {
         gUnMinesPostion.splice(pos, 1);
       }
     }
+    console.log(counter);
   } else {
     for (let m = 0; m < gLevel.MINES; m++) {
       pos = getRandomInt(0, gUnMinesPostion.length);
