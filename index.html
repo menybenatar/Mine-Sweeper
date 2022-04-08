@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>Mine Sweeper 💣</title>
+  </head>
+  <body onload="initGame()">
+    <h1>MineSweeper Game!</h1>
+    <button onclick="restart(4,2)" class="level">Beginner</button>
+    <button onclick="restart(8,12)" class="level">Medium</button>
+    <button onclick="restart(12,30)" class="level">Expert</button>
+    <br/>
+    <button onclick="sevenBoom()"  class="boom">7 BOOM</button>
+
+    <br/>
+    <br/>
+    <div class="live">LIVE:<span>3</span></div>
+    <table oncontextmenu="return false; " class="board">
+    
+        <td class="menu" colspan="16">
+          <section id="status-bar">
+            <div id="bomb-counter">002</div>
+            <button onclick="restart()" class="smileybtn">
+              <span>🙂</span>
+            </button>
+            <div id="timer">000</div>
+          </section>
+        </td>
+
+        <tbody class="board-container"></tbody>
+      </tr>
+    </table>
+
+    <div id="footer"> &copy; All rights reserved <span>MBA</span> </div>
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
